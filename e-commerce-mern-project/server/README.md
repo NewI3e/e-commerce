@@ -6,4 +6,6 @@
 4.practice morgan
 5.practice nodemon
 6.api testing with postman
-7.Middleware
+7.Middleware & types of middleware
+8.Express Error Handling Middleware
+9.how to handle HTTP errors
