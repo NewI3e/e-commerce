@@ -11,3 +11,7 @@
 9. how to handle HTTP errors -- http-errors
 10. how to secure API --> XSS-clean, express-rate-limit
 11. Environment variable
+12. MVC Architecture
+13. connect to mongodb database
+14. Schema and model for user
+15. crate seed route for testing

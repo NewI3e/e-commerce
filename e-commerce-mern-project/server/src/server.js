@@ -1,6 +1,9 @@
-const port = require("./secret");
+const { port } = require("./secret");
 
 const app = require("./app");
-app.listen(port, () => {
+const connectDB = require("./config/db");
+
+app.listen(port, async () => {
   console.log("the server is running at http://localhost:" + port);
+  await connectDB();
 });

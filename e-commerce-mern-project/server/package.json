@@ -12,13 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.2",
     "express-xss-sanitizer": "^2.0.2",
-    "http-errors": "^2.0.1"
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.6.3"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.11.97",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.14"
   }

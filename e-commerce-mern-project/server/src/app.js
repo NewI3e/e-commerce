@@ -3,12 +3,18 @@ const morgan = require("morgan");
 const createError = require("http-errors");
 const { xss } = require("express-xss-sanitizer");
 const rateLimit = require("express-rate-limit");
+const userrouter = require("./routers/userrouter");
+const seeduser = require("./controllers/seedcontroller");
+const seedrouter = require("./routers/seedrouter");
 
 const app = express();
 app.use(xss());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/api/users", userrouter);
+app.use("/api/seed", seedrouter);
 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000,
@@ -26,11 +32,6 @@ app.use(limiter);
 //   }
 // };
 
-app.get("/", (req, res) => {
-  res.status(200).send({
-    massage: "api is {bla bla} working fine",
-  });
-});
 /* islogin, */
 app.get("/test", (req, res) => {
   console.log(req.id);
